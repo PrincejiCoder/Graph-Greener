@@ -1,23 +1,26 @@
 # Graph Greener
 
-This script helps you fill your GitHub contribution graph with green squares by generating backdated commits.
+An automated utility designed to populate the GitHub contribution matrix through programmatic backdated commits. Built for developers who want to maintain a specific visual aesthetic on their profile.
 
-## Usage
+## How it Works
 
-1.  **Install Python**: Ensure you have Python installed on your system.
-2.  **Configuration**: Open `graph_greener.py` and adjust the configuration variables at the top:
-    *   `START_DAYS_AGO`: How far back to start the history.
-    *   `MAX_COMMITS_PER_DAY`: Max intensity of green for a day.
-    *   `FREQUENCY`: How often you want to commit (to simulate realistic breaks).
-3.  **Run the script**:
-    ```bash
-    python graph_greener.py
-    ```
-4.  **Push to GitHub**:
-    *   Create a NEW repository on GitHub (do not initialize with README/license).
-    *   Run the commands output by the script to push your changes.
+The script generates a series of historical commits by manipulating the `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` environment variables, allowing you to fill in gaps in your activity history.
 
-## Warning
+## Getting Started
 
-This script is for educational and aesthetic purposes. Using it to artificially inflate your contribution stats is generally frowned upon in the professional community if misrepresented.
-#
+1. **Environment**: Ensure you have **Python 3.x** installed.
+2. **Configure**: Edit the variables in `graph_greener.py`:
+    * `START_DAYS_AGO`: Set the starting point of your history.
+    * `MAX_COMMITS_PER_DAY`: Controls the intensity of the green squares.
+    * `FREQUENCY`: Adjusts commit density to simulate realistic workflow patterns.
+3. **Execution**:
+    ```bash
+    python graph_greener.py
+    ```
+4. **Deployment**:
+    * Create a new, empty repository on GitHub.
+    * Follow the script's terminal output to push the generated local history.
+
+## ⚠️ Disclaimer
+
+This tool is intended for **aesthetic and educational purposes only**. Programmatic activity generation is a common experiment among developers, but it should not be used to misrepresent your actual skill level or professional work history.
